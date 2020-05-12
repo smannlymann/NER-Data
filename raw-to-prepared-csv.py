@@ -28,6 +28,6 @@ for file in glob.glob("raw-data/*.xml"):
                 outcome = 'OTC'
             if pos is None:
                 pos = 'none'
-            f.write(',' + text + ',' + pos + ',' + outcome + " \n")
+            f.write(',' + text + ',' + pos + ',' + outcome + "\n")
 
 f.close()
