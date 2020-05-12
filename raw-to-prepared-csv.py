@@ -15,6 +15,8 @@ for file in glob.glob("raw-data/*.xml"):
         count = count + 1
         f.write('Sentence: ' + str(count))
         for word in sentence.iter('token'):
+            if word.get('text') == ',':
+                continue
             outcome = word.find("annotation[@type='outcome']")
             if outcome is None:
                 outcome = 'O'
